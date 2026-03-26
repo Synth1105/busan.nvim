@@ -1,7 +1,7 @@
 -- Lualine theme for Busan
 
 local p = {
-  base = "#0C1529",
+  base = "#010313",
   beach = "#007EDA",
   gold = "#EFB908",
   dongbaek = "#CE7B68",

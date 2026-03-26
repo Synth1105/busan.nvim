@@ -1,6 +1,6 @@
 " Busan airline theme
 
-let s:base = '#0C1529'
+let s:base = '#010313'
 let s:beach = '#007EDA'
 let s:gold = '#EFB908'
 let s:dongbaek = '#CE7B68'
