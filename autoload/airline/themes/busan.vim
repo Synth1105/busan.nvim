@@ -1,14 +1,30 @@
 " Busan airline theme
 
-let s:base = '#010313'
-let s:beach = '#007EDA'
-let s:gold = '#EFB908'
-let s:dongbaek = '#CE7B68'
-let s:leaf = '#889E05'
-let s:horison = '#AC4712'
-let s:mackerel = '#596B92'
-let s:wakame = '#2C2A11'
-let s:text = '#BDC1BB'
+let s:variant = get(g:, 'busan_variant', '')
+if empty(s:variant)
+  let s:variant = (&background ==# 'light') ? 'light' : 'night'
+endif
+if s:variant ==# 'light'
+  let s:base = '#d2d6cf'
+  let s:beach = '#003b83'
+  let s:gold = '#ba8a00'
+  let s:dongbaek = '#974938'
+  let s:leaf = '#495800'
+  let s:horison = '#933000'
+  let s:mackerel = '#27375a'
+  let s:wakame = '#201e05'
+  let s:text = '#030d1f'
+else
+  let s:base = '#010313'
+  let s:beach = '#007EDA'
+  let s:gold = '#EFB908'
+  let s:dongbaek = '#CE7B68'
+  let s:leaf = '#889E05'
+  let s:horison = '#AC4712'
+  let s:mackerel = '#596B92'
+  let s:wakame = '#2C2A11'
+  let s:text = '#BDC1BB'
+endif
 
 let s:N1 = [ s:base, s:beach, 0, 4, 'bold' ]
 let s:N2 = [ s:text, s:wakame, 7, 0, '' ]

@@ -1,16 +1,43 @@
 -- Lualine theme for Busan
 
-local p = {
-  base = "#010313",
-  beach = "#007EDA",
-  gold = "#EFB908",
-  dongbaek = "#CE7B68",
-  leaf = "#889E05",
-  horison = "#AC4712",
-  mackerel = "#596B92",
-  wakame = "#2C2A11",
-  text = "#BDC1BB",
+local palettes = {
+  night = {
+    base = "#010313",
+    beach = "#007EDA",
+    gold = "#EFB908",
+    dongbaek = "#CE7B68",
+    leaf = "#889E05",
+    horison = "#AC4712",
+    mackerel = "#596B92",
+    wakame = "#2C2A11",
+    text = "#BDC1BB",
+  },
+  light = {
+    base = "#d2d6cf",
+    beach = "#003b83",
+    gold = "#ba8a00",
+    dongbaek = "#974938",
+    leaf = "#495800",
+    horison = "#933000",
+    mackerel = "#27375a",
+    wakame = "#201e05",
+    text = "#030d1f",
+  },
 }
+
+local variant = vim.g.busan_variant
+if variant == nil or variant == "" then
+  if vim.o.background == "light" then
+    variant = "light"
+  else
+    variant = "night"
+  end
+end
+if variant ~= "light" and variant ~= "night" then
+  variant = "night"
+end
+
+local p = palettes[variant]
 
 return {
   normal = {
